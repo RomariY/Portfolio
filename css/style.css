@@ -2,22 +2,35 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url("/images/back.jpg");
-    background-size: 100%;
+    background-image: url("/images/back1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
     font-family: "Montserrat", 'Times New Roman', Times, serif;
     color: white;
+    background-color: rgb(28, 27, 25);
 }
+
 #topPage{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.738) 19%, rgba(0, 0, 0, 0.541) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(85, 70, 70, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, transparent 100%);
+    /*overflow: hidden;*/
+    height: 100vh;
 }
 
 .top{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    height: 10rem;
+    pointer-events: none;
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 3rem 0;
+    align-items: center;
 }
 
 .menuBar{
@@ -25,13 +38,8 @@ body{
     border-radius: 100%;
     width: 3rem;
     height: 3rem;
-    margin-left: 4rem;
+    margin: 0 0 0 4rem;
     cursor: pointer;
-}
-
-.menuBar hr{
-    width: 1.5rem;
-    background-color: black;
 }
 
 .name{
@@ -40,10 +48,11 @@ body{
     text-decoration: none;
     color: white;
     font-family: "Montserrat", 'Times New Roman', Times, serif;
-    margin-left: 7rem;
+    margin-left: 10rem;
 }
 
 .getInTouch{
+    display: block;
     width: 10rem;
     color: black;
     background-color: white;
@@ -53,9 +62,10 @@ body{
     line-height: 24px;
     font-family: "Lato", 'Times New Roman', Times, serif;
     font-size: 1.1rem;
-    padding: 0.8rem 0;
-    margin: 1rem 4rem 1rem 0;
-    transition: 0.2s ease-in background-color, 0.2s ease-in opacity, 0.2s ease-out transform;
+    padding: 1rem 0;
+    align-items: center;
+    margin: 0 4rem 0 0;
+    /* transition: 0.4s ease-in background-color, 0.2s ease-in opacity, 0.2s ease-out transform; */
     font-weight: bolder;
 }
 
@@ -63,24 +73,48 @@ body{
     color: white;
     background-color: black;
 }
+
 .centerText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75vh;
+}
+
+.centerText h1{
     text-align: center;
+    font-family: 'Yellowtail', 'Times New Roman', Times, serif;
+    font-size: 10rem;
 }
 
-.hamburgerBar{
-    width: 18px;
-    height: 1px;
+#topPage img{
+    width: 100%;
+    bottom: 0;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0);
 }
 
-.hamburger-bar:before, .hamburger-bar:after {
-    content: '';
+.bottomText{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+    justify-content: space-between;
+    margin: 0 4rem 0 4rem;}
+
+.bottomFade{
+    width: 100%;
+    bottom: 0;
+    height: 50vh;   float: left;
     position: absolute;
-    width: 18px;
-    height: 1px;
-    background: rgba(0, 0, 0, 1);
+    background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.738) 19%, rgba(0, 0, 0, 0.541) 40%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 70%, rgba(0, 0, 0, 0.126) 76%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, transparent 100%);}
+
+/* Section navPhoto */
+
+#navPhoto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-repeat: no-repeat;
+    height: 40rem;
+    background-color: black;
 }
