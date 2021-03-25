@@ -230,10 +230,6 @@ body{
 
 }
 
-#navPhoto h1:hover{
-    
-}
-
 #navPhoto p{
     display: flex;
     align-items: flex-end;
