@@ -5,7 +5,7 @@ body{
     background-image: url("/images/back1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    height: 100vh;
     font-family: "Montserrat", 'Times New Roman', Times, serif;
     color: white;
     background-color: rgb(28, 27, 25);
@@ -191,7 +191,7 @@ body{
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 100vh;
     background-color: black;
 }
 
@@ -199,16 +199,15 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0 2rem;
-    width: 18rem;
-    height: 25rem;
+    width: 30vh;
+    height: 50vh;
     position: relative;
 }
 
 #navPhoto a img{
-    width: 18rem;
-    height: 25rem;
+    width: 30vh;
+    height: 50vh;
 }
-
 
 #navPhoto h1, p{
     height: 85%;
@@ -223,23 +222,154 @@ body{
 }
 
 #navPhoto h1{
+    margin: 0;
+    top: 40%;
     display: flex;
     align-items: center;
     font-family: 'Yellowtail', 'Times New Roman', Times, serif;
     font-size: 1.8rem;
-
+    width: max-content;
+    height: max-content !important;
+    z-index: 4;
+    align-self: center;
 }
 
 #navPhoto p{
     display: flex;
-    align-items: flex-end;
-    letter-spacing: 0.5rem;
+    bottom: 0;
+    letter-spacing: 0.3rem;
     font-size: 0.7rem;
     color: rgb(160, 160, 160);
-    
+    width: max-content;
+    height: max-content !important;
 }
 
 .fa-arrow-right{
     font-size: 1rem;
     margin-left: 0.5rem;
 }
+
+/*hover*/
+
+.h1Hover{
+    transition: 0.4s ease-in background-color, 0.2s ease-in opacity, 0.2s ease-out transform;
+    transition: 1s;
+    font-size: 2.5rem !important;
+}
+
+.pHover{
+    transform: translate(0, -1.5rem);
+    transition: 1s;
+    color: white;
+}
+
+.imgHover{
+    opacity: 50%;
+    transition: 1s;
+    transition-timing-function: ease-out;
+}
+
+
+/*About*/
+
+#about{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    background-color: black;
+}
+
+.aboutBack{
+    display: flex;
+    flex-direction: column;
+    height: 150vh;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+}
+
+#about img{
+    height: 150vh;
+    width: 100%;
+}
+
+#aboutBack .bottomFade{
+    background: linear-gradient(to top, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0.738) 23%, rgba(0, 0, 0, 0.541) 44%, rgba(0, 0, 0, 0404) 51%, rgba(0, 0, 0, 0.304) 60%, rgba(0, 0, 0, 0.250) 74%, rgba(0, 0, 0, 0.126) 0%, rgba(0, 0, 0, 0.075) 84.2%, rgba(0, 0, 0, 0.042) 90.1%, rgba(0, 0, 0, 0.021) 94%, rgba(0, 0, 0, 0.008) 98%, rgba(0, 0, 0, 0.002) 100%, trnsparent 100%);
+}
+
+.aboutTXT{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: center;
+    width: 50%;
+    height: 200vh;
+}
+
+.warpCircle{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end !important;
+    padding-bottom: 3rem;
+}
+
+.circle{
+    position: relative;
+    width: 9rem;
+    height: 9rem;
+    background-color: black;
+    border-radius: 100%;
+    z-index: 100;
+
+}
+
+.parg{
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+}
+
+.wrapText{
+    position: relative;
+    display: flex;
+    line-height: 1.6;
+    text-align: justify;margin-top: 1rem;
+    color: rgb(151, 151, 151);
+}
+
+.firstpar{
+    color: white !important;
+    font-weight: bold;
+}
+
+.space{
+    position: relative;
+    height: 50vh;
+}
+
+.photoSec{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    background-color: black;
+}
+
+.photoSec a{
+    position: relative;
+    height: max-content;
+    align-self: flex-end;
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+    font-size: 0.7rem;
+    color: rgb(126, 126, 126);
+    margin: 2rem auto;
+    transition: 1s;
+}
+
+.photoSec a:hover{
+    color: white;
+}
+
