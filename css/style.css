@@ -117,6 +117,7 @@ body{
 .getInTouch:hover{
     color: white;
     background-color: black;
+    transition: 0.4s ease-in background-color, 0.2s ease-in opacity, 0.2s ease-out transform;
 }
 
 .social{
@@ -196,17 +197,19 @@ body{
 }
 
 #navPhoto a{
-    display: flex;
+    display: none;
     flex-direction: column;
     margin: 0 2rem;
     width: 30vh;
     height: 50vh;
     position: relative;
+    transition: 1s ease-in background-color, 0.5s ease-in opacity, 0.5s ease-out transform;
 }
 
 #navPhoto a img{
     width: 30vh;
     height: 50vh;
+    transition: 1s ease-in background-color, 0.5s ease-in opacity, 0.5s ease-out transform;
 }
 
 #navPhoto h1, p{
@@ -218,7 +221,7 @@ body{
     text-decoration: none;
     justify-content: center;
     align-self: center;
-    text-align: center;
+    text-align: center;    
 }
 
 #navPhoto h1{
@@ -232,6 +235,7 @@ body{
     height: max-content !important;
     z-index: 4;
     align-self: center;
+    transition: 0.5s ease-in-out;
 }
 
 #navPhoto p{
@@ -242,6 +246,8 @@ body{
     color: rgb(160, 160, 160);
     width: max-content;
     height: max-content !important;
+    transition: 1s ease-in background-color, 0.5s ease-in opacity, 0.5s ease-out transform;
+    transition-delay: 0.1s;
 }
 
 .fa-arrow-right{
@@ -252,21 +258,20 @@ body{
 /*hover*/
 
 .h1Hover{
-    transition: 0.4s ease-in background-color, 0.2s ease-in opacity, 0.2s ease-out transform;
-    transition: 1s;
+    transition: 0.5s ease-in-out;
     font-size: 2.5rem !important;
+
 }
 
 .pHover{
     transform: translate(0, -1.5rem);
-    transition: 1s;
     color: white;
+    transition: 1s ease-in background-color, 0.5s ease-in opacity, 0.5s ease-out transform;
 }
 
 .imgHover{
     opacity: 50%;
-    transition: 1s;
-    transition-timing-function: ease-out;
+    transition: 1s ease-in background-color, 0.5s ease-in opacity, 0.5s ease-out transform;
 }
 
 
@@ -307,6 +312,7 @@ body{
     align-self: center;
     width: 50%;
     height: 200vh;
+    pointer-events: none;
 }
 
 .warpCircle{
@@ -373,3 +379,103 @@ body{
     color: white;
 }
 
+/*Footer*/
+
+.bottomPage{
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    background-color: black;
+}
+
+footer .topFade{
+    background: linear-gradient(
+        0deg
+        , rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+footer .leftFade{
+    background: linear-gradient(
+        270deg
+        , rgba(0,0,0,0) 0%,  rgba(0,0,0,1) 77%, rgba(0,0,0,1) 80%,  rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%);
+}
+
+.topFade{
+    width: 80vw;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.leftFade{
+    width: 80vw;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.bottomPage{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.bottomPage img{
+    position: relative;
+    width: 120vh;
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.emailTXT{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    flex-direction: column;
+    align-self: center;
+    justify-content: flex-end;
+    z-index: 100;
+    text-align: center;
+}
+
+.emailTXT a{
+    text-decoration: none;
+    color: white;
+}
+
+.mail{
+    font-size: 3.5rem;
+    transition: 1s;
+}
+
+.mail:hover{
+    text-decoration: underline;
+}
+
+.emailTXT p{
+    position: relative;
+    color: rgb(133, 133, 133);
+}
+
+.emailTXT p a{
+    margin: 0 1rem;
+    color: rgb(133, 133, 133);
+    transition: 1s;
+}
+
+.emailTXT h1{
+    font-family: 'Yellowtail', 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 0;
+}
+
+.emailTXT a:hover{
+    color: white;
+    transition: 1s;
+}

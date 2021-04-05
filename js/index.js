@@ -1,4 +1,4 @@
-// Header
+// Headerre
 // Hamburger menu
 
 const menuBar = document.querySelector(".menuBar");
@@ -35,13 +35,11 @@ menuBar.addEventListener('click', _=>{
 
 const navPhotolen = document.getElementById("navPhoto").querySelectorAll("a").length;
 const navPhoto = document.getElementById("navPhoto").querySelectorAll("a");
-const navIMGhover = document.querySelector("section#navPhoto > h1");
-const navh1Hover = document.querySelector(".portfolioh1");
-const navpHover = document.querySelector("#navPhotoap");
 
 for (let i = 0; i < navPhotolen; i++) {
     document.getElementById("navPhoto").querySelectorAll("a")[i].addEventListener('mouseenter', _=>{
         console.log(document.getElementById("navPhoto").querySelectorAll("a")[i])
+        setInterval
         document.getElementById("navPhoto").querySelectorAll("a")[i].querySelector('h1').classList.add('h1Hover');
         document.getElementById("navPhoto").querySelectorAll("a")[i].querySelector('p').classList.add('pHover');
         document.getElementById("navPhoto").querySelectorAll("a")[i].querySelector('img').classList.add('imgHover');
