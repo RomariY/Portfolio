@@ -1,7 +1,14 @@
 /* header */
-body{
+*{
     margin: 0;
     padding: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
     background-image: url("/images/back1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,6 +16,112 @@ body{
     font-family: "Montserrat", 'Times New Roman', Times, serif;
     color: white;
     background-color: rgb(28, 27, 25);
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    transform: scale(1.5);
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    opacity: 0;
+}
+
+.menu div, .menu img{
+    transition: ease-in-out 1s;
+    position: absolute;
+}
+
+.menu.active{
+    z-index: 90;
+    opacity: 100% !important;
+    transition: 1s;
+    overflow: hidden;
+    transform: scale(1);
+}
+
+.menuH1{
+    position: relative !important;
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+}
+
+.menuH1 a{
+    margin: 3rem;
+    color: rgb(119, 119, 119);
+    font-size: 3rem;
+    text-decoration: none;
+    z-index: 1;
+    transition: ease-in-out 1s;
+}
+
+.menuH1 a:hover{
+    color: white;
+    transition: ease-in-out 1s;
+}
+
+.menuftxt{
+    color: white !important;
+    transition: ease-in-out 1s;
+}
+
+.menuftxt:hover{
+    color: rgb(119, 119, 119) !important;
+    transition: ease-in-out 1s;
+}
+
+.menuP{
+    position: relative !important;
+    display: flex;
+    flex-direction: row;
+    z-index: 6;
+    justify-self: center
+
+}
+
+.menuP a{
+    display: inline-block;
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+    color: rgb(160, 160, 160);
+    width: max-content;
+    height: 2rem !important;
+    transition-delay: 0.1s;
+    margin: 1rem 3rem;
+    text-decoration: none;
+    transition: ease-in-out 1s;
+
+}
+
+.menuP a:hover{
+    color: white;
+    transition: ease-in-out 1s;
+    transform: translateY(-0.5rem);
+}
+
+.menu .topFade{
+    background: linear-gradient(
+        0deg
+        , rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+.menu .leftFade{
+    background: linear-gradient(
+        270deg
+        , rgba(0,0,0,0) 0%,  rgba(0,0,0,1) 77%, rgba(0,0,0,1) 80%,  rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%);
+}
+
+.menu img{
+    width: 70%;
+    height: 100%;
+    align-self: flex-end;
 }
 
 #topPage{
@@ -47,10 +160,10 @@ body{
 
 .hamburgerBar{
     width: 1.5rem;
-    height: 0.2rem;
+    height: 0.1rem;
     border-radius: 30%;
     transition: all .5s ease-in-out;
-    background-color: black;
+    background-color: rgb(100, 100, 100);
 }
 
 .hamburgerBar::before,
@@ -58,10 +171,10 @@ body{
     content: '';
     position: absolute;
     width: 1.5rem;
-    height: 0.2rem;
+    height: 0.1rem;
     border-radius: 30%;
     transition: all .5s ease-in-out;
-    background-color: black;
+    background-color: rgb(100, 100, 100);
 }
 
 .hamburgerBar::before{
@@ -73,6 +186,11 @@ body{
 }
 
 /* HamburgerBar animation */
+
+.menuBar:hover{
+    transition: all .5s ease-in-out;
+    background-color: black;
+}
 
 .menuBar.open .hamburgerBar{
     transform: translateX(-1rem);
@@ -162,14 +280,25 @@ body{
     position: absolute;
 }
 
+.fa-compass{
+    font-size: 1.3rem;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
 .bottomText{
     display: flex;
     flex-direction: row;
     font-size: 1rem;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 0 4rem 0 4rem;
-    z-index: 101;
+    margin: 2rem 4rem;
+    z-index: 40;
     height: 100vh;
     color: rgb(160, 160, 160);
 }
@@ -177,7 +306,7 @@ body{
 .bottomFade{
     width: 100%;
     bottom: 0;
-    height: 50vh;
+    height: 40vh;
     float: left;
     position: absolute;
     z-index: 1;
@@ -197,18 +326,18 @@ body{
 }
 
 #navPhoto a{
-    display: none;
+    display: flex;
     flex-direction: column;
     margin: 0 2rem;
     width: 30vh;
-    height: 50vh;
+    height: 45vh;
     position: relative;
     transition: 1s ease-in background-color, 0.5s ease-in opacity, 0.5s ease-out transform;
 }
 
 #navPhoto a img{
     width: 30vh;
-    height: 50vh;
+    height: 45vh;
     transition: 1s ease-in background-color, 0.5s ease-in opacity, 0.5s ease-out transform;
 }
 
@@ -328,10 +457,9 @@ body{
     height: 9rem;
     background-color: black;
     border-radius: 100%;
-    z-index: 100;
-
+    line-height: 9rem;
+    text-align: center;
 }
-
 .parg{
     display: flex;
     text-align: justify;
@@ -342,7 +470,8 @@ body{
     position: relative;
     display: flex;
     line-height: 1.6;
-    text-align: justify;margin-top: 1rem;
+    text-align: justify;
+    margin-top: 1rem;
     color: rgb(151, 151, 151);
 }
 
@@ -365,7 +494,7 @@ body{
 
 .photoSec a{
     position: relative;
-    height: max-content;
+    height: 2rem;
     align-self: flex-end;
     text-decoration: none;
     letter-spacing: 0.3rem;
@@ -377,6 +506,8 @@ body{
 
 .photoSec a:hover{
     color: white;
+    transition: ease-in-out 1s;
+    transform: translateY(-0.5rem);
 }
 
 /*Footer*/
@@ -439,7 +570,7 @@ footer .leftFade{
     flex-direction: column;
     align-self: center;
     justify-content: flex-end;
-    z-index: 100;
+    z-index: 5;
     text-align: center;
 }
 
@@ -465,7 +596,7 @@ footer .leftFade{
 .emailTXT p a{
     margin: 0 1rem;
     color: rgb(133, 133, 133);
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .emailTXT h1{

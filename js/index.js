@@ -1,4 +1,8 @@
-// Headerre
+
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+});
 // Hamburger menu
 
 const menuBar = document.querySelector(".menuBar");
@@ -7,29 +11,15 @@ menuBar.addEventListener('click', _=>{
     if (!menuOpen) {
         menuBar.classList.add('open');
         menuOpen = true;
+        document.querySelector(".menu").classList.add('active');
     } else {
         menuBar.classList.remove('open');
+        document.querySelector(".menu").classList.remove('active');
         menuOpen = false;
     }
 });
 
-//scroll animtion
-
-// let topPage = document.querySelector("body");
-// let centerText = document.querySelector(".centerText");
-// let headerImg = document.querySelector(".headerImg");
-// let bottomFade = document.querySelector(".centerFade");
-// let bottomText = document.querySelector(".bottomText");
-
-// window.addEventListener('scroll', function () {
-//     let value = window.scrollY;
-//     topPage.style.backgroundPosition = +window.pageYOffset + "px";
-//     // topPage.style.bottom = +value * 0.5 + 'px';
-//     // centerText.style.left = +value * 0.5 + 'px';
-//     // headerImg.style.bottom = value * 0.5 + 'px';
-//     // bottomFade.style.bottom = value * 0.5 + 'px';
-//     // bottomText.style.bottom = value * 0.5 + 'px';
-// });
+//scroll animtionx
 
 //navPhoto
 
@@ -38,7 +28,6 @@ const navPhoto = document.getElementById("navPhoto").querySelectorAll("a");
 
 for (let i = 0; i < navPhotolen; i++) {
     document.getElementById("navPhoto").querySelectorAll("a")[i].addEventListener('mouseenter', _=>{
-        console.log(document.getElementById("navPhoto").querySelectorAll("a")[i])
         setInterval
         document.getElementById("navPhoto").querySelectorAll("a")[i].querySelector('h1').classList.add('h1Hover');
         document.getElementById("navPhoto").querySelectorAll("a")[i].querySelector('p').classList.add('pHover');
