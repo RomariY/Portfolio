@@ -19,7 +19,7 @@ body{
 }
 
 .menu{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -325,6 +325,16 @@ body{
     background-color: black;
 }
 
+.portfolio.active, .education.active{
+    transform: translateY(-2rem);
+    transition: ease-in 2s;
+}
+
+.comertialWork.active, .myPreset.active{
+    transform: translateY(2rem);
+    transition: ease-in 2s;
+}
+
 #navPhoto a{
     display: flex;
     flex-direction: column;
@@ -449,6 +459,7 @@ body{
     display: flex;
     justify-content: flex-end !important;
     padding-bottom: 3rem;
+    z-index: 2;
 }
 
 .circle{
@@ -457,9 +468,17 @@ body{
     height: 9rem;
     background-color: black;
     border-radius: 100%;
-    line-height: 9rem;
-    text-align: center;
+    z-index: 5;
+    text-align: center; 
 }
+
+.circleTXT{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    z-index: 5;
+}
+
 .parg{
     display: flex;
     text-align: justify;
@@ -492,7 +511,7 @@ body{
     background-color: black;
 }
 
-.photoSec a{
+.vporHover{
     position: relative;
     height: 2rem;
     align-self: flex-end;
@@ -504,11 +523,41 @@ body{
     transition: 1s;
 }
 
-.photoSec a:hover{
+.vporHover:hover{
     color: white;
     transition: ease-in-out 1s;
     transform: translateY(-0.5rem);
 }
+
+.coffee{
+    position: absolute;
+    width: 50vh !important;
+    height: 25vh !important;
+    top: 50%;
+    left: 50%;
+}
+
+.coffee-b{
+    transform: translate(-125%, -60%);
+}
+
+.photoCenter img{
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 40%;
+}
+
+.centerPH_1, .centerPH_3{
+    height: 50vh;
+    width: 50vh;
+}
+
+.centerPH_2, .centerPH_4{
+    height: 50vh;
+    width: 50vh;
+}
+
 
 /*Footer*/
 

@@ -1,8 +1,11 @@
-
-
+// Headerre
 window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
 });
+
+window.onload = _=>{
+    document.querySelector(".menu").style.display = "flex"
+}
 // Hamburger menu
 
 const menuBar = document.querySelector(".menuBar");
@@ -28,7 +31,6 @@ const navPhoto = document.getElementById("navPhoto").querySelectorAll("a");
 
 for (let i = 0; i < navPhotolen; i++) {
     document.getElementById("navPhoto").querySelectorAll("a")[i].addEventListener('mouseenter', _=>{
-        setInterval
         document.getElementById("navPhoto").querySelectorAll("a")[i].querySelector('h1').classList.add('h1Hover');
         document.getElementById("navPhoto").querySelectorAll("a")[i].querySelector('p').classList.add('pHover');
         document.getElementById("navPhoto").querySelectorAll("a")[i].querySelector('img').classList.add('imgHover');
@@ -44,12 +46,19 @@ for (let i = 0; i < navPhotolen; i++) {
         document.getElementById("navPhoto").querySelectorAll("a")[i].querySelector('img').classList.remove('imgHover');
         //navIMGhover.style.border = '5px dotted orange';
     });
-}
+};
 
 
+window.addEventListener('scroll', function() {
+    let scrl = window.pageYOffset;
+    if (scrl > 600) {
+        document.querySelector(".portfolio").classList.add("active");
+        document.querySelector(".education").classList.add("active");
+        document.querySelector(".comertialWork").classList.add("active");
+        document.querySelector(".myPreset").classList.add("active");
 
+        
+    }else if(scrl > 3500){
 
-
-
-
-
+    }
+});
