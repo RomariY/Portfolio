@@ -93,7 +93,6 @@ body{
     color: rgb(160, 160, 160);
     width: max-content;
     height: 2rem !important;
-    transition-delay: 0.1s;
     margin: 1rem 3rem;
     text-decoration: none;
     transition: ease-in-out 1s;
@@ -207,7 +206,6 @@ body{
 }
 
 .name{
-    padding: 2rem;
     letter-spacing: 0.5rem;
     text-decoration: none;
     color: white;
@@ -332,7 +330,7 @@ body{
 
 .comertialWork.active, .myPreset.active{
     transform: translateY(2rem);
-    transition: ease-in 2s;
+    transition: 2s;
 }
 
 #navPhoto a{
@@ -342,7 +340,6 @@ body{
     width: 30vh;
     height: 45vh;
     position: relative;
-    transition: 1s ease-in background-color, 0.5s ease-in opacity, 0.5s ease-out transform;
 }
 
 #navPhoto a img{
@@ -360,7 +357,8 @@ body{
     text-decoration: none;
     justify-content: center;
     align-self: center;
-    text-align: center;    
+    text-align: center;  
+    transition: 1s ease-out;  
 }
 
 #navPhoto h1{
@@ -385,8 +383,23 @@ body{
     color: rgb(160, 160, 160);
     width: max-content;
     height: max-content !important;
+    transition: 0.5s ease-out;
+}
+
+#navPhoto a:hover img{
+    opacity: 45%;
     transition: 1s ease-in background-color, 0.5s ease-in opacity, 0.5s ease-out transform;
-    transition-delay: 0.1s;
+}
+
+#navPhoto a:hover h1{
+    transition: 0.5s ease-in-out;
+    transform: scale(1.4);
+}
+
+#navPhoto a:hover p{
+    transform: translate(0, -1.5rem);
+    color: white;
+    transition: 0.5s ease-in;
 }
 
 .fa-arrow-right{
@@ -394,25 +407,9 @@ body{
     margin-left: 0.5rem;
 }
 
-/*hover*/
-
-.h1Hover{
+.education svg{
     transition: 0.5s ease-in-out;
-    font-size: 2.5rem !important;
-
 }
-
-.pHover{
-    transform: translate(0, -1.5rem);
-    color: white;
-    transition: 1s ease-in background-color, 0.5s ease-in opacity, 0.5s ease-out transform;
-}
-
-.imgHover{
-    opacity: 50%;
-    transition: 1s ease-in background-color, 0.5s ease-in opacity, 0.5s ease-out transform;
-}
-
 
 /*About*/
 
@@ -463,20 +460,22 @@ body{
 }
 
 .circle{
-    position: relative;
-    width: 9rem;
-    height: 9rem;
-    background-color: black;
     border-radius: 100%;
-    z-index: 5;
-    text-align: center; 
+    width: 11rem;
+    height: 11rem;
+    background-color: black;
 }
 
-.circleTXT{
+.warpCircle svg{
     display: flex;
-    justify-items: center;
-    align-items: center;
-    z-index: 5;
+    margin: 1rem auto;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+.warpCircle .circle svg.active{
+    transition: 1s ease-out;
+    transform: rotate(70deg);
 }
 
 .parg{
@@ -538,26 +537,116 @@ body{
 }
 
 .coffee-b{
-    transform: translate(-125%, -60%);
+    transform: translate(-100%, -60%);
 }
 
-.photoCenter img{
+.coffee-t{
+    transform: translate(-20%, 5%);
+}
+
+.photoCenter a{
     position: absolute;
     z-index: 2;
     top: 40%;
     left: 40%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
 }
 
-.centerPH_1, .centerPH_3{
-    height: 50vh;
-    width: 50vh;
+.blackHoverp, .blackHovern{
+    position: absolute;
+    opacity: 0;
+    background-color: black !important;
+    transition: 1s ease-in-out 0.5s;
 }
 
-.centerPH_2, .centerPH_4{
-    height: 50vh;
-    width: 50vh;
+.blackHovern:hover, .blackHoverp:hover{
+    opacity: 70%;
+    transition: ease-in-out 0.5s;
 }
 
+.photoCenter > a:hover > .fa-eye{
+    opacity: 100%;
+    transition: ease-in-out 0.5s;
+}
+
+.fa-eye{
+    opacity: 0;
+    transition: 1s ease-in-out 0.5s;
+}
+
+.centerPH_1, .centerPH_3, .blackHoverp{
+    height: 35vh !important;
+    width: 25vh !important;
+}
+
+.centerPH_2, .centerPH_4, .blackHovern{
+    height: 25vh !important;
+    width: 35vh !important;
+}
+
+.centerPH_1{
+    background-image: url("/images/Girls/ver.JPG");
+    background-size: cover;
+}
+
+.centerPH_1.active{
+    transform: translate(-30%, -30%) rotate(-10deg);
+    transition: 1s ease-in-out 0.5s;
+}
+
+.centerPH_1:hover{
+    transform: translate(-40%, -40%) rotate(-20deg);
+    transition: ease-in-out 0.5s;
+}
+
+.centerPH_2{
+    background-image: url("/images/Girls/hor.jpg");
+    background-size: cover;
+}
+
+.centerPH_2.active{
+    transform: translate(40%, -30%) rotate(5deg);
+    transition: 1s ease-in-out 0.5s;
+}
+
+.centerPH_2:hover{
+    transform: translate(50%, -40%) rotate(10deg);
+    transition: ease-in-out 0.5s;
+}
+
+.centerPH_3{
+    background-image: url("/images/Girls/ver2.JPG");
+    background-size: cover;
+}
+
+.centerPH_3.active{
+    transform: translate(80%, 40%) rotate(10deg);
+    transition: 1s ease-in-out 0.5s;
+}
+
+.centerPH_3:hover{
+    transform: translate(90%, 50%) rotate(15deg);
+    transition: ease-in-out 0.5s;
+}
+
+.centerPH_4{
+    background-image: url("/images/Girls/hor2.jpg");
+    background-size: cover;
+}
+
+.centerPH_4.active{
+    transform: translate(-40%, 70%) rotate(-10deg);
+    transition: 1s ease-in-out 0.5s;
+}
+
+.centerPH_4:hover{
+    transform: translate(-50%, 80%) rotate(-15deg);
+    transition: ease-in-out 0.5s;
+}
 
 /*Footer*/
 
@@ -658,4 +747,8 @@ footer .leftFade{
 .emailTXT a:hover{
     color: white;
     transition: 1s;
+}
+
+svg{
+    z-index: 10000;
 }

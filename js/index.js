@@ -1,7 +1,8 @@
-// Headerre
-window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
-});
+// const scrollAnim = ()=>{
+//     let windowCenter = (window.innerHeight / 2) + window.scrollY;
+// }
+
+const windowCenter = window.innerHeight / 2;
 
 window.onload = _=>{
     document.querySelector(".menu").style.display = "flex"
@@ -29,36 +30,72 @@ menuBar.addEventListener('click', _=>{
 const navPhotolen = document.getElementById("navPhoto").querySelectorAll("a").length;
 const navPhoto = document.getElementById("navPhoto").querySelectorAll("a");
 
-for (let i = 0; i < navPhotolen; i++) {
-    document.getElementById("navPhoto").querySelectorAll("a")[i].addEventListener('mouseenter', _=>{
-        document.getElementById("navPhoto").querySelectorAll("a")[i].querySelector('h1').classList.add('h1Hover');
-        document.getElementById("navPhoto").querySelectorAll("a")[i].querySelector('p').classList.add('pHover');
-        document.getElementById("navPhoto").querySelectorAll("a")[i].querySelector('img').classList.add('imgHover');
-        console.log("Mouse enter");
-        
-    
+// let scrollAnim = ()=>{
+//     window.addEventListener('scroll', function() {
+//         let scrl = window.pageYOffset + windowCenter;
+//         console.log(scrl)
+//         if (scrl > 700){
+//             document.querySelector(".portfolio").classList.add("active");
+//             document.querySelector(".education").classList.add("active");
+//             document.querySelector(".comertialWork").classList.add("active");
+//             scrollAnim();
+//         }
+//         else if(scrl > 1500){
+//             document.querySelector(".warpCircle svg").classList.add("active");
+//             scrollAnim();
+//         }
+//     });
+// };
+
+// rrrrrrrrrrrrrrrrrr
+// window.addEventListener('scroll', function() {
+//     let scrl = window.pageYOffset + windowCenter;
+//     console.log(scrl)
+//     if (scrl > 700){
+//         document.querySelector(".portfolio").classList.add("active");
+//         document.querySelector(".education").classList.add("active");
+//         document.querySelector(".comertialWork").classList.add("active");
+//     }
+// });
+
+function offset(el) {
+    let rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+}
+
+const firstEl = offset(document.querySelector(".portfolio")), firstRes = firstEl.top;
+
+const secondEl = offset(document.querySelector(".warpCircle")), secondRes = secondEl.top;
+
+const thirdEl = offset(document.querySelector(".centerPH_1")),  thirddRes =  thirdEl.top;
+
+document.addEventListener('DOMContentLoaded', _=>{
+    window.addEventListener('scroll', function() {
+        let scrl = window.pageYOffset + windowCenter;
+        if (scrl > firstRes){
+            document.querySelector(".portfolio").classList.add("active");
+            document.querySelector(".education").classList.add("active");
+            document.querySelector(".comertialWork").classList.add("active");
+            document.querySelector(".myPreset").classList.add("active");
+        }
     });
-    document.getElementById("navPhoto").querySelectorAll("a")[i] .addEventListener('mouseleave', _=>{
     
-        document.getElementById("navPhoto").querySelectorAll("a")[i].querySelector('h1').classList.remove('h1Hover');
-        document.getElementById("navPhoto").querySelectorAll("a")[i].querySelector('p').classList.remove('pHover');
-        console.log("Mouse leave");
-        document.getElementById("navPhoto").querySelectorAll("a")[i].querySelector('img').classList.remove('imgHover');
-        //navIMGhover.style.border = '5px dotted orange';
+    window.addEventListener('scroll', function() {
+        let scrl = window.pageYOffset + windowCenter;
+        if(scrl > secondRes){
+            document.querySelector(".circle svg").classList.add("active");
+        }
     });
-};
-
-
-window.addEventListener('scroll', function() {
-    let scrl = window.pageYOffset;
-    if (scrl > 600) {
-        document.querySelector(".portfolio").classList.add("active");
-        document.querySelector(".education").classList.add("active");
-        document.querySelector(".comertialWork").classList.add("active");
-        document.querySelector(".myPreset").classList.add("active");
-
-        
-    }else if(scrl > 3500){
-
-    }
-});
+    
+    window.addEventListener('scroll', function() {
+        let scrl = window.pageYOffset + windowCenter, len = document.querySelectorAll(".photoCenter a").length;
+        if(scrl > thirddRes){
+            for (let index = 0; index < len; index++) {
+                document.querySelectorAll(".photoCenter a")[index].classList.add("active");
+            }
+           
+        }
+    });
+}); 
