@@ -75,6 +75,11 @@ document.addEventListener('DOMContentLoaded', _=>{
     window.addEventListener('scroll', function() {
         let scrl = window.pageYOffset + windowCenter;
         if (scrl > firstRes){
+            document.querySelector(".name").classList.add("active")
+            setTimeout(() => {
+                document.querySelector(".name").remove()
+            }, 2000);
+            document.querySelector(".name_2").classList.add("active")
             document.querySelector(".portfolio").classList.add("active");
             document.querySelector(".education").classList.add("active");
             document.querySelector(".comertialWork").classList.add("active");

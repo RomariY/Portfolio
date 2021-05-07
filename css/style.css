@@ -205,11 +205,39 @@ body{
     transform: rotate(-45deg) translate(0.73rem, 0.73rem);
 }
 
-.name{
-    letter-spacing: 0.5rem;
+.name, .name_2{
     text-decoration: none;
     color: white;
-    margin-left: 10rem;
+    margin-left: 10rem; 
+    content: "Roman Yaremak";
+    letter-spacing: 0.5rem;
+}
+
+.name.active{
+    transition: 2s;
+    transform: translateY(-100px);
+    content: "";
+    opacity: 0;
+}
+
+.name_2{
+    position: absolute;
+    transition: 1s;
+    display: flex;
+    text-align: center;
+    font-family: 'Yellowtail', 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 2rem;
+    transform: translateY(100px) rotateX(45deg);
+    opacity: 0;
+    letter-spacing: 0 !important;
+    left: 40%;
+}
+
+.name_2.active{
+    transition: 1s;
+    transform: translateY(0) rotateX(0);
+    opacity: 100%;
 }
 
 .getInTouch{
