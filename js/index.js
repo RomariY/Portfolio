@@ -1,6 +1,10 @@
-// const scrollAnim = ()=>{
-//     let windowCenter = (window.innerHeight / 2) + window.scrollY;
-// }
+//Preloader
+document.querySelector("body").style.visibility = "hidden"; 
+document.querySelector("figure").style.visibility = "visible";
+window.addEventListener("load", _=>{
+    document.querySelector("figure").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
+})
 
 const windowCenter = window.innerHeight / 2;
 
@@ -77,7 +81,7 @@ document.addEventListener('DOMContentLoaded', _=>{
         if (scrl > firstRes){
             document.querySelector(".name").classList.add("active")
             setTimeout(() => {
-                document.querySelector(".name").remove()
+                document.querySelector(".name").style.display = "none"
             }, 2000);
             document.querySelector(".name_2").classList.add("active")
             document.querySelector(".portfolio").classList.add("active");
@@ -95,7 +99,7 @@ document.addEventListener('DOMContentLoaded', _=>{
     });
     
     window.addEventListener('scroll', function() {
-        let scrl = window.pageYOffset + windowCenter, len = document.querySelectorAll(".photoCenter a").length;
+        let scrl = window.pageYOffset + windowCenter*1.5, len = document.querySelectorAll(".photoCenter a").length;
         if(scrl > thirddRes){
             for (let index = 0; index < len; index++) {
                 document.querySelectorAll(".photoCenter a")[index].classList.add("active");
