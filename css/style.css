@@ -40,10 +40,7 @@ figure div:nth-child(8):after{animation-delay:-4;}
 }
 
 body{
-    background-image: url("/images/back1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+    width: 100%;
     font-family: "Montserrat", 'Times New Roman', Times, serif;
     color: white;
     background-color: rgb(28, 27, 25);
@@ -241,7 +238,6 @@ body{
     text-decoration: none;
     color: white;
     margin-left: 10rem; 
-    content: "Roman Yaremak";
     letter-spacing: 0.5rem;
 }
 
@@ -255,8 +251,6 @@ body{
 .name_2{
     position: absolute;
     transition: 1s;
-    display: flex;
-    text-align: center;
     font-family: 'Yellowtail', 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 2rem;
@@ -320,6 +314,10 @@ body{
     color: rgb(150, 150, 150);
 }
 
+.topBack{
+    z-index: -1;
+}
+
 .centerText h1{
     height: 100%;
     width: 100%;
@@ -330,6 +328,7 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 8rem;
+    z-index: 2;
 }
 
 #topPage img{
@@ -364,7 +363,7 @@ body{
 .bottomFade{
     width: 100%;
     bottom: 0;
-    height: 40vh;
+    height: 400px;
     float: left;
     position: absolute;
     z-index: 1;
@@ -397,14 +396,14 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0 2rem;
-    width: 30vh;
-    height: 45vh;
+    width: 250px;
+    height: 400px;
     position: relative;
 }
 
 #navPhoto a img{
-    width: 30vh;
-    height: 45vh;
+    width: 250px;
+    height: 400px;
     transition: 1s ease-in background-color, 0.5s ease-in opacity, 0.5s ease-out transform;
 }
 
@@ -421,22 +420,16 @@ body{
     transition: 1s ease-out;  
 }
 
-#navPhoto h1{
+#navPhoto a h1{
     margin: 0;
     top: 40%;
-    display: flex;
-    align-items: center;
     font-family: 'Yellowtail', 'Times New Roman', Times, serif;
     font-size: 1.8rem;
-    width: max-content;
-    height: max-content !important;
     z-index: 4;
-    align-self: center;
     transition: 0.5s ease-in-out;
 }
 
-#navPhoto p{
-    display: flex;
+#navPhoto a p{
     bottom: 0;
     letter-spacing: 0.3rem;
     font-size: 0.7rem;
@@ -485,14 +478,14 @@ body{
 .aboutBack{
     display: flex;
     flex-direction: column;
-    height: 150vh;
+    height: 1920px;
     width: 100%;
     overflow: visible;
     position: relative;
 }
 
 #about img{
-    height: 150vh;
+    height: 1920px;
     width: 100%;
 }
 
@@ -507,7 +500,7 @@ body{
     justify-content: flex-end;
     align-self: center;
     width: 50%;
-    height: 200vh;
+    height: 2300px;
     pointer-events: none;
 }
 
@@ -560,13 +553,13 @@ body{
 
 .space{
     position: relative;
-    height: 50vh;
+    height: 400px;
 }
 
 .photoSec{
     display: flex;
     position: relative;
-    height: 100vh;
+    height: 1000px;
     background-color: black;
 }
 
@@ -590,8 +583,8 @@ body{
 
 .coffee{
     position: absolute;
-    width: 50vh !important;
-    height: 25vh !important;
+    width: 474px !important;
+    height: 237px !important;
     top: 50%;
     left: 50%;
 }
@@ -639,13 +632,13 @@ body{
 }
 
 .centerPH_1, .centerPH_3, .blackHoverp{
-    height: 35vh !important;
-    width: 25vh !important;
+    height: 332px !important;
+    width: 237px !important;
 }
 
 .centerPH_2, .centerPH_4, .blackHovern{
-    height: 25vh !important;
-    width: 35vh !important;
+    height: 237px !important;
+    width: 332px !important;
 }
 
 .centerPH_1{
@@ -730,7 +723,7 @@ footer .leftFade{
 }
 
 .topFade{
-    width: 80vw;
+    width: 1536px;
     position: absolute;
     height: 100%;
     right: 0;
@@ -739,7 +732,7 @@ footer .leftFade{
 }
 
 .leftFade{
-    width: 80vw;
+    width: 1536px;
     position: absolute;
     height: 100%;
     right: 0;
@@ -755,7 +748,7 @@ footer .leftFade{
 
 .bottomPage img{
     position: relative;
-    width: 120vh;
+    width: 1138px;
     display: flex;
     justify-self: flex-end;
     align-self: flex-end;

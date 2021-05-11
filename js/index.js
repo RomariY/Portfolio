@@ -1,5 +1,5 @@
 //Preloader
-document.querySelector("body").style.visibility = "hidden"; 
+document.querySelector("body").style.visibility = "hidden";
 document.querySelector("figure").style.visibility = "visible";
 window.addEventListener("load", _=>{
     document.querySelector("figure").style.display = "none";
@@ -9,7 +9,7 @@ window.addEventListener("load", _=>{
 const windowCenter = window.innerHeight / 2;
 
 window.onload = _=>{
-    document.querySelector(".menu").style.display = "flex"
+    document.querySelector(".menu").style.display = "flex";
 }
 // Hamburger menu
 
@@ -33,35 +33,6 @@ menuBar.addEventListener('click', _=>{
 
 const navPhotolen = document.getElementById("navPhoto").querySelectorAll("a").length;
 const navPhoto = document.getElementById("navPhoto").querySelectorAll("a");
-
-// let scrollAnim = ()=>{
-//     window.addEventListener('scroll', function() {
-//         let scrl = window.pageYOffset + windowCenter;
-//         console.log(scrl)
-//         if (scrl > 700){
-//             document.querySelector(".portfolio").classList.add("active");
-//             document.querySelector(".education").classList.add("active");
-//             document.querySelector(".comertialWork").classList.add("active");
-//             scrollAnim();
-//         }
-//         else if(scrl > 1500){
-//             document.querySelector(".warpCircle svg").classList.add("active");
-//             scrollAnim();
-//         }
-//     });
-// };
-
-// rrrrrrrrrrrrrrrrrr
-// window.addEventListener('scroll', function() {
-//     let scrl = window.pageYOffset + windowCenter;
-//     console.log(scrl)
-//     if (scrl > 700){
-//         document.querySelector(".portfolio").classList.add("active");
-//         document.querySelector(".education").classList.add("active");
-//         document.querySelector(".comertialWork").classList.add("active");
-//     }
-// });
-
 function offset(el) {
     let rect = el.getBoundingClientRect(),
     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
@@ -78,6 +49,7 @@ const thirdEl = offset(document.querySelector(".centerPH_1")),  thirddRes =  thi
 document.addEventListener('DOMContentLoaded', _=>{
     window.addEventListener('scroll', function() {
         let scrl = window.pageYOffset + windowCenter;
+        console.log(scrl)
         if (scrl > firstRes){
             document.querySelector(".name").classList.add("active")
             setTimeout(() => {
