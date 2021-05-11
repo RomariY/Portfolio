@@ -1,11 +1,7 @@
+
+
 @media screen and (max-width: 484px){
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    body{
-        width: 100%;
-    }
+    
     .menu div, .menu img{
         transition: ease-in-out 1s;
         position: absolute;
@@ -98,6 +94,10 @@
         width: 150px;
         font-size: 0.5rem;
     }
+    .specialPhoto{
+        width: 70px !important;
+        height: 70px !important;
+    }
     .aboutBack{
         height: 600px;
     }
@@ -176,3 +176,4 @@
         font-size: 0.8rem;
     }
 }   
+

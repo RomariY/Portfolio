@@ -1,5 +1,5 @@
+@import "./fonts.css";
 /* Preloader */
-
 
 figure{margin:0;transform:translate(-50%,-50%) rotate(0deg) scale(1.4,1.4);position:absolute;left:50%;top:50%;border-radius:150px;box-sizing:border-box;animation:rotation 20s infinite linear; visibility: visible;}
 
@@ -408,7 +408,6 @@ body{
 }
 
 #navPhoto h1, p{
-    height: 85%;
     display: flex;
     z-index: 3;
     position: absolute;
@@ -460,8 +459,14 @@ body{
     margin-left: 0.5rem;
 }
 
-.education svg{
+.specialPhoto{
+    width: 100px !important;
+    height: 100px !important;
     transition: 0.5s ease-in-out;
+}
+#navPhoto a:hover .specialPhoto{
+    opacity: 100%;
+    transition: 1s ease-in;
 }
 
 /*About*/
@@ -642,7 +647,7 @@ body{
 }
 
 .centerPH_1{
-    background-image: url("/images/Girls/ver.JPG");
+    background-image: url("../images/Girls/ver.JPG");
     background-size: cover;
 }
 
@@ -657,7 +662,7 @@ body{
 }
 
 .centerPH_2{
-    background-image: url("/images/Girls/hor.jpg");
+    background-image: url("../images/Girls/hor.jpg");
     background-size: cover;
 }
 
@@ -672,7 +677,7 @@ body{
 }
 
 .centerPH_3{
-    background-image: url("/images/Girls/ver2.JPG");
+    background-image: url("../images/Girls/ver2.JPG");
     background-size: cover;
 }
 
@@ -687,7 +692,7 @@ body{
 }
 
 .centerPH_4{
-    background-image: url("/images/Girls/hor2.jpg");
+    background-image: url("../images/Girls/hor2.jpg");
     background-size: cover;
 }
 
