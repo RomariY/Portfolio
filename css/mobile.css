@@ -104,7 +104,8 @@
         height: 600px;
     }
     .aboutBack img{
-        height: 600px;
+        height: 600px !important;
+        width: 100%;
     }
     #aboutBack .bottomFade{
         height: 600px;
