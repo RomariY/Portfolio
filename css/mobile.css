@@ -59,7 +59,7 @@
     .bottomText{
         display: flex;
         justify-content: center;
-        background-color: black;
+        height: 400px;
     }
     .bottomTextH4{
         display: none;

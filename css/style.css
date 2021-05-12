@@ -354,9 +354,9 @@ body{
     font-size: 1rem;
     justify-content: space-between;
     align-items: flex-end;
+    height: 600px;
     margin: 2rem 4rem;
     z-index: 40;
-    height: 100vh;
     color: rgb(160, 160, 160);
 }
 
