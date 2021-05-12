@@ -46,37 +46,36 @@ const secondEl = offset(document.querySelector(".warpCircle")), secondRes = seco
 
 const thirdEl = offset(document.querySelector(".centerPH_1")),  thirddRes =  thirdEl.top;
 
-document.addEventListener('DOMContentLoaded', _=>{
-    window.addEventListener('scroll', function() {
-        let scrl = window.pageYOffset + windowCenter;
-        console.log(scrl)
-        if (scrl > firstRes){
-            document.querySelector(".name").classList.add("active")
-            setTimeout(() => {
-                document.querySelector(".name").style.display = "none"
-            }, 2000);
-            document.querySelector(".name_2").classList.add("active")
-            document.querySelector(".portfolio").classList.add("active");
-            document.querySelector(".education").classList.add("active");
-            document.querySelector(".comertialWork").classList.add("active");
-            document.querySelector(".myPreset").classList.add("active");
+
+window.addEventListener('scroll', function() {
+    let scrl = window.pageYOffset + windowCenter;
+    console.log(scrl)
+    if (scrl > firstRes){
+        document.querySelector(".name").classList.add("active")
+        setTimeout(() => {
+            document.querySelector(".name").style.display = "none"
+        }, 2000);
+        document.querySelector(".name_2").classList.add("active")
+        document.querySelector(".portfolio").classList.add("active");
+        document.querySelector(".education").classList.add("active");
+        document.querySelector(".comertialWork").classList.add("active");
+        document.querySelector(".myPreset").classList.add("active");
+    }
+});
+
+window.addEventListener('scroll', function() {
+    let scrl = window.pageYOffset + windowCenter;
+    if(scrl > secondRes){
+        document.querySelector(".circle svg").classList.add("active");
+    }
+});
+
+window.addEventListener('scroll', function() {
+    let scrl = window.pageYOffset + windowCenter*1.5, len = document.querySelectorAll(".photoCenter a").length;
+    if(scrl > thirddRes){
+        for (let index = 0; index < len; index++) {
+            document.querySelectorAll(".photoCenter a")[index].classList.add("active");
         }
-    });
-    
-    window.addEventListener('scroll', function() {
-        let scrl = window.pageYOffset + windowCenter;
-        if(scrl > secondRes){
-            document.querySelector(".circle svg").classList.add("active");
-        }
-    });
-    
-    window.addEventListener('scroll', function() {
-        let scrl = window.pageYOffset + windowCenter*1.5, len = document.querySelectorAll(".photoCenter a").length;
-        if(scrl > thirddRes){
-            for (let index = 0; index < len; index++) {
-                document.querySelectorAll(".photoCenter a")[index].classList.add("active");
-            }
-           
-        }
-    });
-}); 
+        
+    }
+});
