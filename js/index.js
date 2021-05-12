@@ -1,4 +1,5 @@
 //Preloader
+
 document.querySelector("body").style.visibility = "hidden";
 document.querySelector("figure").style.visibility = "visible";
 window.addEventListener("load", _=>{
@@ -49,7 +50,6 @@ const thirdEl = offset(document.querySelector(".centerPH_1")),  thirddRes =  thi
 
 window.addEventListener('scroll', function() {
     let scrl = window.pageYOffset + windowCenter;
-    console.log(scrl)
     if (scrl > firstRes){
         document.querySelector(".name").classList.add("active")
         setTimeout(() => {
@@ -79,3 +79,4 @@ window.addEventListener('scroll', function() {
         
     }
 });
+
