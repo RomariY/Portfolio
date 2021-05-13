@@ -50,13 +50,12 @@ window.onload = _=>{
 
 document.querySelector("body").style.visibility = "hidden";
 document.querySelector("figure").style.visibility = "visible";
-window.addEventListener("load", _=>{
-    document.querySelector("figure").style.display = "none";
-    document.querySelector("body").style.visibility = "visible";
-})
+
 
 window.addEventListener('load', (event) => {
     console.log("Loaded")
+    document.querySelector("figure").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
     const windowCenter = window.innerHeight / 2;
 // Hamburger menu
 
