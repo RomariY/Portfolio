@@ -181,7 +181,7 @@
         font-size: 0.8rem;
     }
 }   
-/* 
+
 
 @media screen and (max-width: 768px) and (orientation: landscape){
     .topPage{
@@ -217,7 +217,7 @@
         display: none;
     }
     .top{
-        position: absolute;
+        position: fixed;
         display: flex;
         height: 5rem;
         justify-content: unset;
@@ -228,7 +228,7 @@
         overflow: hidden;
     }
     .name{
-        margin-left: 3rem;
+        margin-left: 10rem;
     }
     .name_2{
         margin-left: 0;
@@ -254,24 +254,26 @@
     #navPhoto{
         display: flex;
         flex-wrap: wrap;
-        height: 700px;
+        height: 900px;
         padding: 0 10px;
         justify-content: space-around;
     }
     #navPhoto a{
         flex: 0 1 40%;
-        width: 150px;
-        height: 250px;
+        width: 200px;
+        height: 300px;
         flex-direction: row;
         margin: 0;
+        display: flex;
+        justify-content: center;
     }
     #navPhoto a img{
-        width: 150px;
-        height: 250px;
+        width: 200px;
+        height: 300px;
     }
     #navPhoto .bottomFade{
-        width: 150px;
-        height: 250px;
+        width: 200px;
+        height: 300px;
     }
     #navPhoto a h1{
         width: 150px;
@@ -332,7 +334,7 @@
     }
     .photoCenter a{
         top: 40%;
-        left: 30%;
+        left: 40%;
         overflow: hidden;
     }
     .centerPH_1, .centerPH_3, .blackHoverp{
@@ -363,4 +365,4 @@
     .mailP{
         font-size: 0.8rem;
     }
-}    */
+}   
