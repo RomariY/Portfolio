@@ -71,8 +71,9 @@
     #navPhoto{
         display: flex;
         flex-wrap: wrap;
+        height: 700px;
         padding: 0 10px;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     #navPhoto a{
         flex: 0 1 40%;
@@ -181,3 +182,186 @@
     }
 }   
 
+
+@media screen and (orientation: landscape){
+    .topPage{
+        background-color: black;
+    }
+    .menu div, .menu img{
+        transition: ease-in-out 1s;
+        position: absolute;
+        width: 100%;
+    }
+    .menuH1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menuH1 a{
+        flex: 0 1 50%;
+        font-size: 1.5rem;
+        margin: 1rem;
+        text-align: center;
+    }
+    .menuP{
+        display: none;
+    }
+    .menuBar{
+        margin: 0rem 0.5rem;
+    }
+    .menuBar:hover{
+        transition: all .5s ease-in-out;
+        background-color: rgb(255, 255, 255);
+    }
+    .getInTouch{
+        display: none;
+    }
+    .top{
+        display: flex;
+        height: 5rem;
+        justify-content: unset;
+        margin: 0;
+    }
+    .topBack{
+        height: 100% !important;
+        overflow: hidden;
+    }
+    .name{
+        margin-left: 3rem;
+        left: 40%;
+    }
+    .name_2{
+        margin-left: 0;
+        left: 40%;
+    }
+    #topPage img{
+        height: 50%;
+    }
+    .centerText h1{
+        font-size: 5rem;
+    }
+    .bottomText{
+        display: flex;
+        justify-content: center;
+        height: 400px;
+    }
+    .bottomTextH4{
+        display: none;
+    }
+    .bottomFade{
+        width: 100%;
+        height: 250px;
+    }
+    #navPhoto{
+        display: flex;
+        flex-wrap: wrap;
+        height: 700px;
+        padding: 0 10px;
+        justify-content: space-around;
+    }
+    #navPhoto a{
+        flex: 0 1 40%;
+        width: 150px;
+        height: 250px;
+        flex-direction: row;
+        margin: 0;
+    }
+    #navPhoto a img{
+        width: 150px;
+        height: 250px;
+    }
+    #navPhoto .bottomFade{
+        width: 150px;
+        height: 250px;
+    }
+    #navPhoto a h1{
+        width: 150px;
+        font-size: 1.5rem;
+    }
+    #navPhoto a p, #navPhoto a p i{
+        width: 150px;
+        font-size: 0.5rem;
+    }
+    .specialPhoto{
+        width: 70px !important;
+        height: 70px !important;
+    }
+    .aboutBack{
+        height: 600px;
+    }
+    .aboutBack img{
+        height: 600px !important;
+        width: 100%;
+    }
+    #aboutBack .bottomFade{
+        height: 600px;
+    }
+    .aboutTXT{
+        height: 900px;
+        width: 80%;
+    }
+    .circle{
+        width: 6rem;
+        height: 6rem;
+    }
+    .warpCircle svg{
+        width: 5rem;
+        height: 5rem;
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 0.6rem;
+    }
+    .wrapText{
+        display: none;
+        font-size: 0.8rem;
+    }
+    .firstpar{
+        display: flex !important;
+    }
+    .wrapText:nth-child(2){
+        display: flex;
+    }
+    .space{
+        height: 150px;
+    }
+    .photoSec{
+        height: 800px;
+    }
+    .coffee{
+        width: 200px !important;
+        height: 150px !important;
+    }
+    .photoCenter a{
+        top: 40%;
+        left: 30%;
+        overflow: hidden;
+    }
+    .centerPH_1, .centerPH_3, .blackHoverp{
+        height: 200px !important;
+        width: 150px !important;
+    }
+    
+    .centerPH_2, .centerPH_4, .blackHovern{
+        height: 150px !important;
+        width: 200px !important;
+    }
+    .leftFade{
+        width: 100%;
+    }
+    .bottomPage{
+        width: 100%;
+    }
+    .bottomPage img{
+        width: 100%;
+    }
+    .mail{
+        font-size: 1.5rem;
+    }
+    .emailTXT h1{
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+    .mailP{
+        font-size: 0.8rem;
+    }
+}   
