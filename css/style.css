@@ -254,7 +254,9 @@ body{
     display: flex;
     text-decoration: none;
     color: white;
-    margin-left: 10rem; 
+    z-index: -1;
+    width: 100%;
+    justify-content: center;
     letter-spacing: 0.5rem;
 }
 
@@ -274,7 +276,6 @@ body{
     transform: translateY(100px) rotateX(45deg);
     opacity: 0;
     letter-spacing: 0 !important;
-    left: 40%;
 }
 
 .name_2.active{
@@ -344,7 +345,7 @@ body{
     font-size: 10rem;
     justify-content: center;
     align-items: center;
-    margin-top: 8rem;
+    margin-top: 10rem;
     z-index: 2;
 }
 
